@@ -41,7 +41,7 @@ public class TransactionControllerTest {
 
     @WithMockUser(value = "username")
     @Test
-    public void testCreatingTransactionReturns200WithInvalidRequestBodyIdAttribute() throws Exception {
+    public void testCreatingTransactionReturns400WithInvalidRequestBodyIdAttribute() throws Exception {
         performPostRequest("/transaction/v1/create",
                 MediaType.APPLICATION_JSON,
                 createTransactionRequest(null, TransactionStatus.PENDING,
@@ -51,7 +51,7 @@ public class TransactionControllerTest {
 
     @WithMockUser(value = "username")
     @Test
-    public void testCreatingTransactionReturns200WithInvalidRequestBodyAmountAttribute() throws Exception {
+    public void testCreatingTransactionReturns400WithInvalidRequestBodyAmountAttribute() throws Exception {
         performPostRequest("/transaction/v1/create",
                 MediaType.APPLICATION_JSON,
                 createTransactionRequest("Test1", TransactionStatus.PENDING,
@@ -61,7 +61,7 @@ public class TransactionControllerTest {
 
     @WithMockUser(value = "username")
     @Test
-    public void testCreatingTransactionReturns200WithInvalidRequestBodyCurrencyAttribute() throws Exception {
+    public void testCreatingTransactionReturns400WithInvalidRequestBodyCurrencyAttribute() throws Exception {
         performPostRequest("/transaction/v1/create",
                 MediaType.APPLICATION_JSON,
                 createTransactionRequest("Test1", TransactionStatus.PENDING,
