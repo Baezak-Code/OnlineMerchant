@@ -4,7 +4,7 @@ This is an online merchant application which handles transaction requests e.g. c
 ## Running
 ### Prerequisites
 - Java 17
-- Maven (or you can use `mvnw`)
+- Maven
 
 ### Execution
 You can run the code in this repository by executing `src/main/java/com/online/merchant/Application.java`.
